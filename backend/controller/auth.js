@@ -23,6 +23,8 @@ const sendOTP = async (otp, email, name) => {
   try {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
+      port: 465,
+      secure: false,
       auth: {
         user: 'amit.dev.nit@gmail.com',
         pass: password
