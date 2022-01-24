@@ -15,6 +15,10 @@ app.use(express.json())
 app.use('/user', authRouter)
 app.use('/restaurant', restaurantRouter)
 app.use('/razor', paymentRouter)
+app.use('/test', (req , res) => {
+  return res.send("Hello from test");
+})
+
 
 mongoose.connect(
   process.env.ATLAS_URI,
