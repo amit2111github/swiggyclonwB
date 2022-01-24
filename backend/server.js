@@ -28,6 +28,6 @@ mongoose.connect(
   }
 )
 
-app.listen("https://sweggy-backend.herokuapp.com/", () => {
+app.listen(5000 ,  () => {
   console.log('Server is Up & Running')
 })
