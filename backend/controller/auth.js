@@ -28,6 +28,7 @@ const sendOTP = async (otp, email, name) => {
         pass: password
       }
     })
+    console.log("mail created");
     const info = await transporter.sendMail({
       from: '"Eflyer 👻" <amit.dev.nit@gmail.com>',
       to: email,
@@ -35,6 +36,7 @@ const sendOTP = async (otp, email, name) => {
       html: `<p>Hello</p> <h2>${name}</h2> </br> <p>Your OTP for Swiggy is ${otp}</p>`
     })
     const response = await transporter.sendMail(info)
+    console.log("Get respone" , response);
   } catch (err) {
     console.log(err , "AT sending mail");
     throw Error('Failed to Send OTP')
