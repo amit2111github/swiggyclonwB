@@ -6,6 +6,7 @@ const jwt = require('jsonwebtoken')
 const expressJwt = require('express-jwt')
 const secret = process.env.SECRET
 const password = process.env.GMAIL_PASSWORD
+console.log(password);
 
 const validPhoneNumber = (str) => {
   const regexExp = /^[6-9]\d{9}$/gi
